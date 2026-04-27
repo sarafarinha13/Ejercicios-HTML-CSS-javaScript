@@ -1,0 +1,30 @@
+body  /* Con el fixed no se repite cada vez que acaba el patrón */
+{
+    background: linear-gradient(
+        40deg, 
+        red,
+        orange,
+        yellow,
+        green,
+        cyan,
+        blue,
+        violet
+    );
+    background-attachment:fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1{
+    padding: 20px;
+    font-family:'Comic Relief';
+    font-style: italic;
+    text-align: center;
+    color: black;
+    font-size: 60px;
+    background-color: white;
+   
+}
