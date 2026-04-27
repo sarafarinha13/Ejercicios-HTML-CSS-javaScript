@@ -1,3 +1,11 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+
+
 body  /* Con el fixed no se repite cada vez que acaba el patrón */
 {
     background: linear-gradient(
@@ -12,7 +20,8 @@ body  /* Con el fixed no se repite cada vez que acaba el patrón */
     );
     background-attachment:fixed;
 
-    display: flex;
+    display: flex; /* pone por defecto un elemento al lado del otro */
+    flex-direction: column; /*cambia la dirección entre elementos a columna */
     align-items: center;
     justify-content: center;
 }
@@ -26,5 +35,60 @@ h1{
     color: black;
     font-size: 60px;
     background-color: white;
+    margin-top: 60px;
+    margin-bottom: 60px;
+   
+}
+
+.slider-container{
+    width: 500%;
+    max-width: 300px;
+    border-radius: 10px;
+
+    overflow: hidden; /* el desbordamiento de ver las imagenes una seguida de la otra se oculta */
+    
+    position: relative; /* padre de referencia para posicionarese de button */
+}
+
+
+/* Así ocupa el 100% de los 400 px del slider-container */
+img{
+    width: 100%;
+    
+}
+
+.slider{
+    display: flex;
+}
+
+.slide{
+    min-width: 100%; /* así ocupa cada umagen el 100% del ancho del contenedor  300px*/
+    
+}
+
+.button{
+    position: absolute; /* va ser hijo del primer position que haya. Usará el otro de referencia */
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-70%);
+    
+}
+
+
+button{
+    background-color: transparent;
+    color: #000000;
+    border: 0;
+    outline: 0;
+    cursor: pointer; /* cambia el cursor del ratón a una mano */
+    font-size: 50px;
+    padding: 0 10px;
+    user-select: none;
+}
+
+button:hover{
+    color: red;
    
 }
