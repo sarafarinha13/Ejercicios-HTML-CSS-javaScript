@@ -34,46 +34,55 @@ h1{
     text-align: center;
     color: black;
     font-size: 60px;
-    background-color: white;
+    background-color: white ;
     margin-top: 60px;
     margin-bottom: 60px;
+
+    border: 5px solid black;
+    border-radius: 10px;
+    user-select: none; /* para que el usuario no pueda seleccionarlo */
    
 }
 
 .slider-container{
     width: 500%;
-    max-width: 300px;
-    border-radius: 10px;
+    max-width: 500px;
+   
 
     overflow: hidden; /* el desbordamiento de ver las imagenes una seguida de la otra se oculta */
     
     position: relative; /* padre de referencia para posicionarese de button */
+
 }
 
 
 /* Así ocupa el 100% de los 400 px del slider-container */
 img{
     width: 100%;
-    
 }
+
+
 
 .slider{
     display: flex;
+    
 }
 
 .slide{
-    min-width: 100%; /* así ocupa cada umagen el 100% del ancho del contenedor  300px*/
-    
+    min-width: 100%; /* así ocupa cada imagen el 100% del ancho del contenedor  300px*/
+  
+}
+
+.slide img{
+    border-radius: 10px;
 }
 
 .button{
     position: absolute; /* va ser hijo del primer position que haya. Usará el otro de referencia */
-    top: 50%;
+    top: 35%;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    transform: translateY(-70%);
-    
+    justify-content: space-between; /*Reparte los elementos dejando espacio entre ellos */
 }
 
 
@@ -83,7 +92,7 @@ button{
     border: 0;
     outline: 0;
     cursor: pointer; /* cambia el cursor del ratón a una mano */
-    font-size: 50px;
+    font-size: 75px;
     padding: 0 10px;
     user-select: none;
 }
@@ -91,4 +100,30 @@ button{
 button:hover{
     color: red;
    
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 3px;
+
+    border: solid 3px;
+
+}
+
+.dot.active{
+    background: black;
+}
+
+.dots-container{
+    position: absolute; /* respecto al relative del .slider_container */
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%); /* muevete 50% con respecto a tu posición (del pripio elemento) */
+    display: flex;
+    
 }
