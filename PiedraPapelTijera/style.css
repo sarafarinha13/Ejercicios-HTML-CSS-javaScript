@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bungee", sans-serif;
+}
+
+
+body{
+    background-color:#0E1428;
+}
+
+/* --------CABECERA--------- */
+.cabecera{
+    background-color:#8783D1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom:5px;
+    gap: 5px;
+}
+
+h1 {
+    /* hace que se adapte a la pantalla y no deje de estar en linea */
+    font-size: 5vw;
+    white-space: nowrap;
+
+    color:#0E1428;
+    text-align: center;
+
+
+}
+
+.salir_juego {
+    padding: 6px 20px;
+    margin-bottom: 20px;
+    min-width: (2rem,);
+    cursor: pointer;
+    border-radius: 15px;
+    background: none;
+    border: 3px solid #0E1428;
+    color: #0E1428; 
+}
+
+.salir_juego:hover{
+    background-color: #0E1428;
+    color: #8783D1;
+}
+
+/* --------JUEGO--------- */
+
+.contenedor {
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: nowrap;
+/*   background-color: green; */
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+
+/* CUADRADO USUARIO */
+
+.contenedor_usuario{
+    width:min(350px, 40vw);
+    aspect-ratio:1/1;
+  /*   background:#F49D37; */
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+.boton{
+    width:min(160px, 25vw);
+    border-radius: 15px;
+   /*  background-color: blue; */
+    border: #8783D1 2px dotted ;
+}
+
+.boton:hover{
+    background-color: #8783D1;
+}
+
+/* CUADRADO PC */
+
+.contenedor_pc{
+    width:min(350px, 40vw);
+    aspect-ratio:1/1;
+  /*   background:aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* VS */
+.vs{
+    color:#0E1428;
+    font-size:clamp(2rem, 5vw, 4rem);
+    border:  2px solid;
+    background-color: #8783D1;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+
+/* -------RESULTADO-------- */
