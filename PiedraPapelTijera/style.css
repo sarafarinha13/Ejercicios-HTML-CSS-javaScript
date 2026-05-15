@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bungee", sans-serif;
+}
+
+/* CREAR VARIABLES */
+:root{
+    --color-oscuro: #0E1428;
+    --color-morado: #8783D1;
+
+}
+
+
+body {
+    background-color:var(--color-oscuro);
+
+}
+
+/* --------CABECERA--------- */
+.cabecera {
+    background-color:var(--color-morado);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 5px;
+    gap: 5px;
+}
+
+h1 {
+    /* hace que se adapte a la pantalla y no deje de estar en linea */
+    font-size: 5vw;
+    white-space: nowrap;
+
+    color: var(--color-oscuro);
+    text-align: center;
+
+
+}
+
+.salir_juego {
+    padding: 6px 20px;
+    margin-bottom: 20px;
+    min-width: 2rem;
+    cursor: pointer;
+    border-radius: 15px;
+    background: none;
+    border: 3px solid var(--color-oscuro);
+    color: var(--color-oscuro);
+}
+
+.salir_juego:hover {
+    background-color: var(--color-oscuro);
+    color: var(--color-morado);
+}
+
+/* --------JUEGO--------- */
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    /*   background-color: green; */
+    padding-top: 25px;
+    padding-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Estilo que comparten los contenedores */
+.panel_juego{
+    width: min(350px, 40vw);
+    aspect-ratio: 1/1;
+    display: flex;
+}
+
+/* CUADRADO USUARIO */
+
+#contenedor_usuario {
+    flex-direction: column;
+}
+
+
+
+/* CUADRADO PC */
+
+#contenedor_pc {
+    align-items: center;
+    justify-content: center;
+}
+
+/* VS */
+.vs {
+    color: var(--color-oscuro);
+    font-size: clamp(2rem, 5vw, 4rem);
+    border: 2px solid;
+    background-color: var(--color-morado);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.boton_juego{
+    background: none;
+    border: none;
+}
+
+.img_juego {
+    width: min(160px, 25vw);
+    border-radius: 15px;
+    /*  background-color: blue; */
+    border: var(--color-morado) 2px dotted;
+}
+
+.img_juego:hover {
+    background-color: var(--color-morado);
+}
+
+/* -------RESULTADO-------- */
+#contenedor_resultado{
+    background-color: transparent;
+    color: var(--color-morado);
+
+    width: 50vw; /* tamaño del cajon */
+    margin: 0 auto; /* para que se ponga en el medio */
+    padding: 10px;
+
+
+    border: var(--color-morado) solid 3px;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.panel_resultado{
+/*     background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+
+   
+    align-items: center;
+}
